@@ -18,7 +18,7 @@ export class DettaglioPazienteComponent implements OnInit {
     cittaDiNascita: '',
     email: '',
     professione: '',
-    codiceFiscaleProfessionista: '',
+    //codiceFiscaleProfessionista: '',
     sesso: '',
     statoCivile: '',
   };

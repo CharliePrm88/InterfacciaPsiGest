@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-6">
       <div *ngIf="currentPaziente">
-        <h4>Pazienti</h4>
+        <h4>Paziente</h4>
         <div>
           <label><strong>Nome:</strong></label> {{ currentPaziente.nome }}
         </div>
@@ -45,8 +45,33 @@
           <label><strong>Cognome:</strong></label>
           {{ currentPaziente.cognome }}
         </div>
-  
-        <a class="badge badge-warning" routerLink="/paziente/{{ currentPaziente.id }}">
+        <div>
+          <label><strong>Indirizzo:</strong></label> {{ currentPaziente.indirizzo }}
+        </div>
+        <div>
+          <label><strong>Data Di Nascita:</strong></label>
+          {{ currentPaziente.dataDiNascita }}
+        </div>
+        <div>
+          <label><strong>Luogo Di Nascita:</strong></label> {{ currentPaziente.cittaDiNascita }}
+        </div>
+        <div>
+          <label><strong>E-mail:</strong></label>          {{ currentPaziente.email }}
+        </div>
+        <div>
+          <label><strong>Professione:</strong></label> {{ currentPaziente.professione }}
+        </div>
+        <div>
+          <label><strong>Sesso:</strong></label>
+          {{ currentPaziente.sesso }}
+        </div>
+        <div>
+          <label><strong>Stato Civile:</strong></label> {{ currentPaziente.statoCivile }}
+        </div>
+        
+
+
+        <a class="badge badge-warning" routerLink="/paziente/{{ currentPaziente.cf }}">
           Modifica
         </a>
       </div>

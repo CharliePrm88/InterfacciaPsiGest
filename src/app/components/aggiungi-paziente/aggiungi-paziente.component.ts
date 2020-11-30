@@ -17,7 +17,7 @@ export class AggiungiPazienteComponent implements OnInit {
     cittaDiNascita: '',
     email: '',
     professione: '',
-    codiceFiscaleProfessionista: '',
+    //codiceFiscaleProfessionista: '',
     sesso: '',
     statoCivile: '',
   };
@@ -38,7 +38,7 @@ export class AggiungiPazienteComponent implements OnInit {
       cittaDiNascita: this.paziente.cittaDiNascita,
       email: this.paziente.email,
       professione: this.paziente.professione,
-      codiceFiscaleProfessionista: this.paziente.codiceFiscaleProfessionista,
+      //codiceFiscaleProfessionista: this.paziente.codiceFiscaleProfessionista,
       sesso: this.paziente.sesso,
       statoCivile: this.paziente.statoCivile,
     };
@@ -65,7 +65,7 @@ export class AggiungiPazienteComponent implements OnInit {
     cittaDiNascita: '',
     email: '',
     professione: '',
-    codiceFiscaleProfessionista: '',
+   // codiceFiscaleProfessionista: '',
     sesso: '',
     statoCivile: '',
     };

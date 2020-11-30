@@ -10,7 +10,6 @@
             required
             [(ngModel)]="paziente.cf"
             name="cf"
-            pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$"
           />
         </div>
 
@@ -75,7 +74,6 @@
               class="form-control"
               id="email"
               required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               [(ngModel)]="paziente.email"
               name="email"
             />

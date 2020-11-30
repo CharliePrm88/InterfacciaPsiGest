@@ -7,7 +7,7 @@ export class Paziente {
     cittaDiNascita: string;
     email: string;
     professione: string;
-    codiceFiscaleProfessionista: string;
+    //codiceFiscaleProfessionista: string;
     sesso: string;
     statoCivile: string;
 }

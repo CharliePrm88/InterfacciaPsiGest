@@ -3,6 +3,17 @@
       <h4>Paziente</h4>
       <form>
         <div class="form-group">
+          <div class="form-group">
+            <label for="cf">Codice Fiscale</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cf"
+              [(ngModel)]="currentPaziente.cf"
+              name="cf"
+            />
+          </div>
+
           <label for="title">Nome</label>
           <input
             type="text"
@@ -22,6 +33,68 @@
             name="cognome"
           />
         </div>
+        
+        <div class="form-group">
+          <label for="dataDiNascita">Data di nascita</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cognome"
+            [(ngModel)]="currentPaziente.dataDiNascita"
+            name="cognome"
+          />
+        </div>
+        <div class="form-group">
+          <label for="luogoDiNascita">Città di Nascita</label>
+          <input
+            type="text"
+            class="form-control"
+            id="luogoDiNascita"
+            [(ngModel)]="currentPaziente.luogoDiNascita"
+            name="luogoDiNascita"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cognome">E-mail</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            [(ngModel)]="currentPaziente.email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="professione">Professione</label>
+          <input
+            type="text"
+            class="form-control"
+            id="professione"
+            [(ngModel)]="currentPaziente.professione"
+            name="professione"
+          />
+        </div>
+        <div class="form-group">
+          <label for="sesso">Sesso</label>
+          <input
+            type="text"
+            class="form-control"
+            id="sesso"
+            [(ngModel)]="currentPaziente.sesso"
+            name="sesso"
+          />
+        </div>
+        <div class="form-group">
+          <label for="statoCivile">Stato Civile</label>
+          <input
+            type="text"
+            class="form-control"
+            id="professione"
+            [(ngModel)]="currentPaziente.statoCivile"
+            name="statoCivile"
+          />
+        </div>
+
       </form>
   
       <button class="badge badge-danger mr-2" (click)="eliminaPaziente()">
