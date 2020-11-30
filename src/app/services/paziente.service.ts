@@ -36,7 +36,7 @@ export class PazienteService {
     return this.http.delete(baseUrl);
   }
 
-  findByTitle(cf: string): Observable<Paziente[]> {
-    return this.http.get<Paziente[]>(`${baseUrl}?title=${cf}`);
+  trovaPerCognome(cognome: string): Observable<Paziente[]> {
+    return this.http.get<Paziente[]>(`${baseUrl}?cognome=${cognome}`);
   }
 }

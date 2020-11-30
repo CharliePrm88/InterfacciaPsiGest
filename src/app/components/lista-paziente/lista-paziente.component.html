@@ -1,1 +1,59 @@
-<p>lista-paziente works!</p>
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Cerca per cognome"
+          [(ngModel)]="cognome"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="trovaPaziente()"
+          >
+            Cerca
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Anagrafica</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let paziente of pazienti; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActivePaziente(paziente, i)"
+        >
+          {{ paziente.cognome }} {{paziente.nome}}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="rimuoviTuttiIPazienti()">
+            Rimuovi tutti
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentPaziente">
+        <h4>Pazienti</h4>
+        <div>
+          <label><strong>Nome:</strong></label> {{ currentPaziente.nome }}
+        </div>
+        <div>
+          <label><strong>Cognome:</strong></label>
+          {{ currentPaziente.cognome }}
+        </div>
+  
+        <a class="badge badge-warning" routerLink="/paziente/{{ currentPaziente.id }}">
+          Modifica
+        </a>
+      </div>
+  
+      <div *ngIf="!currentPaziente">
+        <br />
+        <p>Clicca su un paziente!</p>
+      </div>
+    </div>
+  </div>

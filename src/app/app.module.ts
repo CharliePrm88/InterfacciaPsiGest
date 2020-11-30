@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AggiungiPazienteComponent } from './components/aggiungi-paziente/aggiungi-paziente.component';
 import { DettaglioPazienteComponent } from './components/dettaglio-paziente/dettaglio-paziente.component';
@@ -16,6 +18,8 @@ import { ListaPazienteComponent } from './components/lista-paziente/lista-pazien
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

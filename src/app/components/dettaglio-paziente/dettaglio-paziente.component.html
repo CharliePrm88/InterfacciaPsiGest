@@ -1,1 +1,45 @@
-<p>dettaglio-paziente works!</p>
+<div>
+    <div *ngIf="currentPaziente.cf" class="edit-form">
+      <h4>Paziente</h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            [(ngModel)]="currentPaziente.nome"
+            name="nome"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cognome">Cognome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cognome"
+            [(ngModel)]="currentPaziente.cognome"
+            name="cognome"
+          />
+        </div>
+      </form>
+  
+      <button class="badge badge-danger mr-2" (click)="eliminaPaziente()">
+        Elimina
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updatePaziente()"
+      >
+        Aggiorna il paziente
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentPaziente.cf">
+      <br />
+      <p>Non riesco ad accedere a questo paziente</p>
+    </div>
+  </div>
