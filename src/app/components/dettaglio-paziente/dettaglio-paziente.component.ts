@@ -31,7 +31,7 @@ export class DettaglioPazienteComponent implements OnInit {
 
   ngOnInit(): void {
     this.message = '';
-    this.prendiPaziente(this.route.snapshot.params.id);
+    this.prendiPaziente(this.route.snapshot.params.cf);
   }
 
   prendiPaziente(cf: string): void {
